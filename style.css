@@ -153,10 +153,12 @@ section {
 }
 
 .tour {
+  height: 100vh;
   background-color: #1e1e28;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   padding: 100px 20px;
   transition:
     opacity 1s ease,
