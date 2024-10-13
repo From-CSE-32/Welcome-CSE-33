@@ -28,6 +28,7 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 5px solid red;
+  background: #1e2229;
 }
 
 svg {
@@ -107,7 +108,7 @@ a:hover {
     background: #1e2229;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 575px) {
   .dropdown {
     left: 2rem;
     width: unset;
@@ -120,12 +121,34 @@ section {
 }
 
 .wishcard {
-  background-color: #1e1e28;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url("cover.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+  0% { background-position: center center; }
+  100% { background-position: center center; }
+}
+
+.wishcard-content {
+  z-index: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 .title {
