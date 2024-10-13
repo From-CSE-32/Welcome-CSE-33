@@ -29,7 +29,7 @@ body {
   align-items: center;
   border-bottom: 5px solid red;
   background: #1e2229;
-  z-index: 100;
+  z-index: 1;
 }
 
 svg {
@@ -79,7 +79,7 @@ a:hover {
   width: 300px;
   list-style: none;
   display: none;
-  z-index: 100;
+  z-index: 1;
 }
 
 .close {
