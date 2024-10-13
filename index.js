@@ -2,6 +2,7 @@ const quotes = [
   "deko jeta balo mone koro",
   "don banaiso vai seiii hoise",
   "You think you're straight, but so is spaghetti, until it is wet.",
+  "হ্যাঁ, আটকায় গেলেই তো শিখতে হবে।",
 ];
 
 const typedText = document.getElementById("typed-text");
@@ -33,3 +34,12 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
+
+const toggleDropdown = document.querySelector(".toggler");
+const toggleDropdownIcon = document.querySelector(".toggler i");
+const toggleDropdownMenu = document.querySelector(".dropdown");
+
+toggleDropdown.onclick = () => {
+  toggleDropdownMenu.classList.toggle("close");
+  toggleDropdownIcon.classList = toggleDropdownMenu.classList.contains("close") ? "fa-solid fa-bars" : "fa-solid fa-xmark";
+}

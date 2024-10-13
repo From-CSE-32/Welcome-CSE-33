@@ -1,8 +1,117 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap");
+* {
   margin: 0;
-  font-family: "Arial", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Virgil";
+  src: url("Virgil.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
   background-color: #232634;
   color: #d9e0ee;
+  overflow-x: hidden;
+  font-family: "Virgil", "Baloo Da 2", sans-serif;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid red;
+}
+
+svg {
+  height: 7rem;
+  width: 7rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation li {
+  list-style: none;
+  display: inline-block;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  background: none;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  text-transform: uppercase;
+  border-style: solid;
+  border-color: white;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+
+.toggler {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown {
+  position: absolute;
+  right: 2rem;
+  top: 80px;
+  right: 52px;
+  width: 300px;
+  list-style: none;
+  display: none;
+}
+
+.close {
+  display: none !important;
+}
+
+.dropdown li {
+  padding: 1.2rem;
+}
+
+/* filthy mobile users */
+@media (max-width: 992px) {
+  .navigation {
+    display: none;
+  }
+
+  .toggler {
+    display: block;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: red;
+    background: #1e2229;
+  }
+}
+@media (max-width: 992px) {
+  .dropdown {
+    left: 2rem;
+    width: unset;
+  }
 }
 
 section {
@@ -10,7 +119,7 @@ section {
   text-align: center;
 }
 
-.first-sector {
+.wishcard {
   background-color: #1e1e28;
   height: 100vh;
   display: flex;
@@ -24,7 +133,7 @@ section {
   margin-bottom: 20px;
 }
 
-.second-sector {
+.tour {
   background-color: #1e1e28;
   display: flex;
   flex-wrap: wrap;
