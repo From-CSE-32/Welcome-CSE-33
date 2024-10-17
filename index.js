@@ -1,12 +1,19 @@
 const quotes = [
-  "deko jeta balo mone koro",
-  "don banaiso vai seiii hoise",
-  "You think you're straight, but so is spaghetti, until it is wet.",
-  "হ্যাঁ, আটকায় গেলেই তো শিখতে হবে।",
+  {
+    quote: "deko jeta balo mone koro",
+    author: "Anonymous",
+  }, {
+    quote: "You think you're straight, but so is spaghetti, until it is wet.",
+    author: "Anonymous",
+  }, {
+    quote: "হ্যাঁ, আটকায় গেলেই তো শিখতে হবে।",
+    author: "Anonymous",
+  },
 ];
 
 const typedText = document.getElementById("typed-text");
-let text = `❝ ${quotes[Math.floor(Math.random() * quotes.length)]}`;
+let rando = quotes[Math.floor(Math.random() * quotes.length)];
+let text = `❝ ${rando.quote} - ${rando.author}`;
 console.log(text);
 let index = 0;
 
