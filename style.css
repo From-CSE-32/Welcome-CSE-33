@@ -37,8 +37,8 @@ body {
 }
 
 svg {
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 .navigation {
@@ -155,7 +155,7 @@ section {
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -225,11 +225,49 @@ section {
   width: 200px;
   height: 200px;
   border-radius: 8px;
+  transition: 0.3s;
+}
+
+.subsector img:hover {
+  box-shadow: 5px 5px rgba(137, 180, 250, 1);
+  border-radius: 10px;
 }
 
 .subsector p {
   font-size: 20px;
   margin-top: 10px;
+}
+
+.album {
+  text-align: center;
+  z-index: 2;
+}
+
+.album h1 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.7em;
+  margin: 50px 50px;
+}
+
+.album-pictures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.album img {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  flex-shrink: 1;
+}
+
+.album img:hover {
+  box-shadow: 5px 5px rgba(137, 180, 250, 1);
+  border-radius: 20px;
 }
 
 .footer {

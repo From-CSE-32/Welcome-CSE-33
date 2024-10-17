@@ -27,33 +27,32 @@ const quotes = [
     author: "Anonymous teacher",
   },
   {
-    quote:
-      "ফৌর বেইসিক স্খিলস, অখেই?",
+    quote: "ফৌর বেইসিক স্খিলস, অখেই?",
     author: "Anonymous teacher",
   },
   {
-    quote:
-      "কোড মুখস্ত করে খাতায় লেখার নাম কম্পিউটার সায়েন্স।",
+    quote: "কোড মুখস্ত করে খাতায় লেখার নাম কম্পিউটার সায়েন্স।",
     author: "Anonymous student",
   },
   {
-    quote:
-      "কম্পিউটার সায়েন্সে আদুভাই, আদু আপাদের কোনো খাওয়া নাই।",
+    quote: "কম্পিউটার সায়েন্সে আদুভাই, আদু আপাদের কোনো খাওয়া নাই।",
     author: "Anonymous teacher",
   },
   {
     quote:
-      "In a world without walls and fences, who needs Windows and Gates?",
+      "হৃদয়ে বুদবুদ মত উঠে চিন্তা শুভ্র কত, মিশে যায় হৃদয়ের তলে, পাছে লোকে কিছু বলে।",
+    author: "কামিনী রায়",
+  },
+  {
+    quote: "In a world without walls and fences, who needs Windows and Gates?",
     author: "Unknown",
   },
   {
-    quote:
-      "Talk is cheap. Show me the code.",
+    quote: "Talk is cheap. Show me the code.",
     author: "Linus Torvalds",
   },
   {
-    quote:
-      "Free software is not about price, it's about freedom.",
+    quote: "Free software is not about price, it's about freedom.",
     author: "Richard Stallman",
   },
   {
@@ -77,8 +76,7 @@ const quotes = [
     author: "Douglas Adams",
   },
   {
-    quote:
-      "The engineer has been, and is, a maker of history",
+    quote: "The engineer has been, and is, a maker of history",
     author: "James Kip Finch",
   },
 ];
