@@ -264,6 +264,7 @@ section {
   max-height: 350px;
   object-fit: contain;
   flex-shrink: 1;
+  transition: 0.3s;
 }
 
 .album img:hover {
