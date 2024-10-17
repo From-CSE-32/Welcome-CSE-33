@@ -84,8 +84,7 @@ const quotes = [
 ];
 
 const typedText = document.getElementById("typed-text");
-// const rando = quotes[Math.floor(Math.random() * quotes.length)];
-const rando = quotes[quotes.length - 1];
+const rando = quotes[Math.floor(Math.random() * quotes.length)];
 let text = `❝ ${rando.quote} — ${rando.author}.`;
 console.log(text);
 let index = 0;
