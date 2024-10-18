@@ -76,26 +76,61 @@ const quotes = [
     author: "Douglas Adams",
   },
   {
-    quote: "The engineer has been, and is, a maker of history",
+    quote: "The engineer has been, and is, a maker of history.",
     author: "James Kip Finch",
   },
 ];
 
-const typedText = document.getElementById("typed-text");
-const rando = quotes[Math.floor(Math.random() * quotes.length)];
-let text = `❝ ${rando.quote} — ${rando.author}.`;
-console.log(text);
-let index = 0;
+const typedTextElement = document.getElementById("typed-text");
+const typingSpeed = 50;
+const delayBetweenQuotes = 3000;
+let lastQuoteIndex = -1;
 
-function typeWriter() {
-  if (index < text.length) {
-    typedText.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeWriter, 100);
-  }
+function getRandomQuote() {
+  let randomIndex;
+  do {
+    randomIndex = Math.floor(Math.random() * quotes.length);
+  } while (randomIndex == lastQuoteIndex);
+
+  lastQuoteIndex = randomIndex;
+  return quotes[randomIndex];
 }
 
-window.onload = typeWriter;
+function typeQuote(quote, author, callback) {
+  let index = 0;
+  typedTextElement.innerHTML = "";
+
+  function typeCharacter() {
+    if (index < quote.length) {
+      typedTextElement.innerHTML += quote.charAt(index);
+      index++;
+      setTimeout(typeCharacter, typingSpeed);
+    } else {
+      typedTextElement.innerHTML += "<br>— ";
+      index = 0;
+
+      function typeAuthor() {
+        if (index < author.length) {
+          typedTextElement.innerHTML += author.charAt(index);
+          index++;
+          setTimeout(typeAuthor, typingSpeed);
+        } else {
+          setTimeout(callback, delayBetweenQuotes);
+        }
+      }
+
+      typeAuthor();
+    }
+  }
+
+  typeCharacter();
+}
+function showRandomQuote() {
+  const { quote, author } = getRandomQuote();
+  typeQuote(quote, author, showRandomQuote);
+}
+
+window.onload = showRandomQuote;
 const subsectors = document.querySelectorAll(".subsector");
 
 function revealOnScroll() {

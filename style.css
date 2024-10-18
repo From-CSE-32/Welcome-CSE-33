@@ -22,6 +22,27 @@ body {
   font-family: "Virgil", "Baloo Da 2", sans-serif;
 }
 
+h1 {
+  color: #ffffff;
+  text-shadow:
+    0 1px 0px #1e9bff,
+    1px 0 0px #1e9bff,
+    1px 2px 1px #1e9bff,
+    2px 1px 1px #1e9bff,
+    2px 3px 2px #1e9bff,
+    3px 2px 2px #1e9bff,
+    3px 4px 2px #1e9bff,
+    4px 3px 3px #1e9bff,
+    4px 5px 3px #1e9bff,
+    5px 4px 2px #1e9bff,
+    5px 6px 2px #1e9bff,
+    6px 5px 2px #1e9bff,
+    6px 7px 1px #1e9bff,
+    7px 6px 1px #1e9bff,
+    7px 8px 0px #1e9bff,
+    8px 7px 0px #1e9bff;
+}
+
 .topbar {
   position: fixed;
   top: 0;
@@ -153,6 +174,7 @@ section {
 
 .wishcard-content p {
   font-size: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 992px) {
