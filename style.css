@@ -155,6 +155,12 @@ section {
   font-size: 20px;
 }
 
+@media (max-width: 992px) {
+  .wishcard-content h1 {
+    font-size: 2.2em;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -191,7 +197,7 @@ section {
 }
 
 .tour-title {
-  font-size: 45px;
+  font-size: 2.7em;
   font-family: "JetBrains Mono", monospace;
 }
 
@@ -203,6 +209,12 @@ section {
 
 .tour-paragraph {
   font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .tour-title {
+    font-size: 2.2em;
+  }
 }
 
 .advice {
@@ -249,6 +261,12 @@ section {
   font-family: "JetBrains Mono", monospace;
   font-size: 2.7em;
   margin: 50px 50px;
+}
+
+@media (max-width: 992px) {
+  .album h1 {
+    font-size: 2.2em;
+  }
 }
 
 .album-pictures {
